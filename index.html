@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Confession Ni Brent33 </title>
+  <link rel="stylesheet" href="love.html">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e0, #ffeef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px; 
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%; 
+}
+    h2 {
+      color: #ff4d6d;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      outline: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63956;
+    }
+
+    .message {
+      margin-top: 20px;
+      display: none;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      color: #ff4d6d;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Please Enter Your Name 💌</h2>
+  <input type="text" id="nameInput" placeholder="Your name...">
+  <br>
+  <button onclick="showMessage()">Submit</button>
+
+  <div class="message" id="confession">
+    <p id="text"></p>
+    <p class="heart">❤️</p>
+  </div>
+</div>
+
+<script>
+  function showMessage() {
+    let name = document.getElementById("nameInput").value;
+    let messageBox = document.getElementById("confession");
+    let text = document.getElementById("text");
+
+    if(name.trim() === "") {
+      alert("Please enter your name!");
+      return;
+    }
+
+    text.innerHTML = `
+      Hey <b>${name}</b>,<br><br>
+      I've been wanting to tell you something... 💭<br><br>
+      I can't stop thinking about how amazing you are.<br>
+      You make my days brighter and my heart lighter.<br><br>
+      And honestly... I think I like you mwehehe,,<br><br>
+      its mey brenty missing u so much.<br><br>
+    `;
+
+    messageBox.style.display = "block";
+  }
+</script>
+
+</body>
+</html>
